@@ -1,24 +1,15 @@
-import asyncio
-from pyrogram import Client, filters
-import config
+import pyrogram
 
-app = Client(
+app = pyrogram.Client(
     "FileShareBot",
-    api_id=config.API_ID,
-    api_hash=config.API_HASH,
-    bot_token=config.BOT_TOKEN
+    api_id=32365018,
+    api_hash="b38f338dda9b9fb2902710bfe8dcfff",
+    bot_token="8560444041:AAEZ65J_BmP6qr4_fHXoMaJ5260AUY1Nh7Y"
 )
 
-@app.on_message(filters.command("start"))
-async def start_handler(client, message):
-    await message.reply_text(
-        f"Namaskara {message.from_user.mention}! Naanu File Share Bot. Nannalli movie athava file kachdare link kottu kalsutte."
-    )
+@app.on_message(pyrogram.filters.command("start"))
+def start_handler(client, message):
+    message.reply_text("Namaskara! Naanu File Share Bot.")
 
-async def main():
-    await app.start()
-    print("Bot is running...")
-    await asyncio.idle()
-
-if __name__ == "__main__":
-    asyncio.run(main())
+print("Bot is starting...")
+app.run()
