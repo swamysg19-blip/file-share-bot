@@ -1,9 +1,6 @@
-import logging
+import asyncio
 from pyrogram import Client, filters
-from pyrogram.types import Message
 import config
-
-logging.basicConfig(level=logging.INFO)
 
 app = Client(
     "FileShareBot",
@@ -13,10 +10,15 @@ app = Client(
 )
 
 @app.on_message(filters.command("start"))
-async def start_handler(client: Client, message: Message):
+async def start_handler(client, message):
     await message.reply_text(
         f"Namaskara {message.from_user.mention}! Naanu File Share Bot. Nannalli movie athava file kachdare link kottu kalsutte."
     )
 
-print("Bot is running...")
-app.run()
+async def main():
+    await app.start()
+    print("Bot is running...")
+    await asyncio.idle()
+
+if __name__ == "__main__":
+    asyncio.run(main())
