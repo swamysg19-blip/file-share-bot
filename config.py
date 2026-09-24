@@ -1,14 +1,14 @@
 import os
 
-# BotFather inda banda token
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "8560444041:AAEZ65J_BmP6qr4_fHXoMaJ5260AUY1Nh7Y")[cite: 2]
+# Bot Token
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "8560444041:AAEZ65J_BmP6qr4_fHXoMaJ5260AUY1Nh7Y")
 
-# Telegram API ID & Hash (my.telegram.org inda barutte)
-API_ID = int(os.environ.get("API_ID", "YOUR_API_ID"))
-API_HASH = os.environ.get("API_HASH", "YOUR_API_HASH")
+# Nimma Asali API Details Illi Haaki:
+API_ID = int(os.environ.get("API_ID", 32365018))
+API_HASH = os.environ.get("API_HASH", "b38f338dda9b9fb2902710bfe8dcfff")
 
-# MongoDB Connection URL
-MONGODB_URI = os.environ.get("MONGODB_URI", "mongodb+srv://swamysg19_db_user:8YRqU4lnIezTB8WC@cluster0.viihgnx.mongodb.net/?appName=Cluster0")[cite: 8, 10]
+# MongoDB URI
+MONGODB_URI = os.environ.get("MONGODB_URI", "mongodb+srv://swamysg19_db_user:8YRqU4lnIezTB8WC@cluster0.viihgnx.mongodb.net/?appName=Cluster0")
 
-# File save aguva channel ID
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-100xxxxxxxxxx"))
+# Channel ID (Optional for now)
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", -1001234567890))
